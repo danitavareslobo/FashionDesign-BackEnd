@@ -2,5 +2,6 @@
 {
     public class PasswordResetResponse
     {
+        public string Email { get; set; }
     }
 }
