@@ -1,4 +1,4 @@
-﻿using fashionDesignAPI.Dto.Users.Request;
+﻿using fashionDesign.Dto.Users.Request;
 using fashionDesignAPI.Models;
 
 namespace fashionDesignAPI.Interfaces.Repositories
