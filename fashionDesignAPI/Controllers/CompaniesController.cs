@@ -1,7 +1,8 @@
-﻿using designFashion.Dto.Users.Response;
-using fashionDesignAPI.Attributes;
+﻿using fashionDesignAPI.Attributes;
 using fashionDesignAPI.Dto.Companies.Request;
+using fashionDesignAPI.Dto.Users.Response;
 using fashionDesignAPI.Interfaces.Services;
+using fashionDesignAPI.Models.Enums;
 
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace fashionDesignAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(RoleEnum.Admin)]
     public class CompaniesController : ControllerBase
     {
         private readonly ICompaniesService _service;

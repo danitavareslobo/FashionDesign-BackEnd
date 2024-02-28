@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using fashionDesign.Exceptions;
-using fashionDesign.Interfaces.Repositories;
 using fashionDesignAPI.Dto.Companies.Request;
 using fashionDesignAPI.Dto.Companies.Response;
+using fashionDesignAPI.Exceptions;
 using fashionDesignAPI.Extensions;
 using fashionDesignAPI.Interfaces.Repositories;
 using fashionDesignAPI.Interfaces.Services;
