@@ -74,6 +74,23 @@ namespace fashionDesignAPI.Database
                         Manager = "Daniele Tavares Lobo",
                         Password = "12345678"
                     });
+
+            modelBuilder
+                .Entity<Collection>()
+                .HasData(
+                    new Collection
+                    {
+                        Id = 1,
+                        Name = "Estação Vibrante",
+                        ResponsibleId = 1,
+                        CompanyId = 1,
+                        ReleaseYear = new DateTime(01, 06, 2024),
+                        Season = SeasonEnum.Spring,
+                        Status = StatusEnum.NotStarted,
+                        Collors = "",
+                        Budget = 20000,
+                        Brand = "Colcci"
+                    });
         }
     }
 }
