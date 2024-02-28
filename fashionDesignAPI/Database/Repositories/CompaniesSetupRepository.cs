@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Database.Repositories
+﻿namespace fashionDesignAPI.Database.Repositories
 {
     public class CompaniesSetupRepository
     {

@@ -1,9 +1,10 @@
-﻿using fashionDesign.Dto.Users.Request;
-using fashionDesign.Interfaces.Repositories;
-using fashionDesign.Models.Enums;
-using fashionDesign.Models;
+﻿using fashionDesignAPI.Dto.Users.Request;
+using fashionDesignAPI.Interfaces.Repositories;
+using fashionDesignAPI.Models.Enums;
+using fashionDesignAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace fashionDesign.Database.Repositories
+namespace fashionDesignAPI.Database.Repositories
 {
     public class UsersRepository : IUsersRepository
     {
@@ -51,12 +52,16 @@ namespace fashionDesign.Database.Repositories
 
         public async Task<User?> GetByIdAsync(int Id)
         {
-            return await _dbContext.Users.Include(u => u.Company).FirstOrDefaultAsync(u => u.Id == Id);
+            throw new NotImplementedException();
+            //TODO:
+            //return await _dbContext.Users.Include(u => u.Company).FirstOrDefaultAsync(u => u.Id == Id);
         }
 
         public async Task<List<User>> GetAllAsync(int companyId)
         {
-            return await _dbContext.Users.Include(u => u.Company).Where(u => u.CompanyId == companyId).ToListAsync();
+            throw new NotImplementedException();
+            //TODO:
+            //return await _dbContext.Users.Include(u => u.Company).Where(u => u.CompanyId == companyId).ToListAsync();
         }
 
         public async Task<bool> CheckEmailAsync(int id, string email)

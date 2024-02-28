@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Interfaces.Services
+﻿namespace fashionDesignAPI.Interfaces.Services
 {
     public class ICollectionsService
     {

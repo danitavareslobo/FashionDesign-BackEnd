@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace fashionDesign.Dto.Users.Request
+namespace fashionDesignAPI.Dto.Users.Request
 {
     public class AuthenticateRequest
     {

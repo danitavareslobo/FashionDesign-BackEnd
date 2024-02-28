@@ -1,30 +1,36 @@
-﻿using designFashion.Dto.Users.Response;
-using fashionDesign.Dto.Users.Request;
-using fashionDesign.Interfaces.Services;
+﻿using AutoMapper;
+using fashionDesignAPI.Dto.Users.Response;
+using fashionDesignAPI.Dto.Users.Request;
+using fashionDesignAPI.Interfaces.Services;
+using fashionDesignAPI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 using System.Net;
 
-namespace fashionDesign.Controllers
+namespace fashionDesignAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class UsersController : ControllerBase
     {
         private readonly IUsersService _service;
+        private readonly IMapper _mapper;
 
-        public UsersController(IUsersService service)
+        public UsersController(IUsersService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] PostUsers user)
         {
             var changer = (UsersResponse)HttpContext.Items["User"]!;
+            user.CompanyId = changer.CompanyId;
+            var result = await _service.CreateAsync(_mapper.Map<User>(user));
 
-
+            return Created("users", result);
         }
 
         [HttpPut("{id:int}")]

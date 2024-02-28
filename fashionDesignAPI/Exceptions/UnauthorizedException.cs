@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Exceptions
+﻿namespace fashionDesignAPI.Exceptions
 {
     public class UnauthorizedException : Exception
     {

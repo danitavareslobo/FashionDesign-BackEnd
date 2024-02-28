@@ -1,31 +1,36 @@
-﻿using designFashion.Dto.Users.Response;
-using fashionDesign.Dto.Users.Request;
-using fashionDesign.Exceptions;
-using fashionDesign.Interfaces.Repositories;
-using fashionDesign.Interfaces.Services;
-using fashionDesign.Models.Enums;
-using fashionDesign.Models;
+﻿using fashionDesignAPI.Dto.Users.Response;
+using fashionDesignAPI.Dto.Users.Request;
+using fashionDesignAPI.Exceptions;
+using fashionDesignAPI.Interfaces.Repositories;
+using fashionDesignAPI.Interfaces.Services;
+using fashionDesignAPI.Models.Enums;
+using fashionDesignAPI.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using AutoMapper;
+using fashionDesignAPI.Extensions;
 
-namespace fashionDesign.Services
+namespace fashionDesignAPI.Services
 {
     public class UsersService : IUsersService
     {
         private readonly IUsersRepository _repository;
         private readonly ICompaniesRepository _companyRepository;
+        private readonly IMapper _mapper;
         private readonly IConfiguration _configuration;
 
         public UsersService(
             IUsersRepository repository,
             ICompaniesRepository companyRepository,
+            IMapper mapper,
             IConfiguration configuration
         )
         {
             _repository = repository;
             _companyRepository = companyRepository;
+            _mapper = mapper;
             _configuration = configuration;
         }
 
@@ -49,7 +54,7 @@ namespace fashionDesign.Services
             user.Password = "12345678";
 
             await _repository.CreateAsync(user);
-            
+            return _mapper.Map<UsersResponse>(user);
         }
 
         public async Task<bool> DeleteAsync(int id, int changeId)
@@ -74,12 +79,12 @@ namespace fashionDesign.Services
 
         public async Task<List<UsersResponse>> GetAllAsync(int companyId)
         {
-            return <List<UsersResponse>>(await _repository.GetAllAsync(companyId));
+            return _mapper.Map<List<UsersResponse>>(await _repository.GetAllAsync(companyId));
         }
 
         public async Task<UsersResponse> GetByIdAsync(int id)
         {
-            return <UsersResponse>(await _repository.GetByIdAsync(id));
+            return _mapper.Map<UsersResponse>(await _repository.GetByIdAsync(id));
         }
         public async Task<bool> GetEmailAsync(string email)
         {

@@ -1,5 +1,5 @@
-﻿using fashionDesign.Models.Enums;
-using fashionDesign.Models;
+﻿using fashionDesignAPI.Models.Enums;
+using fashionDesignAPI.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace fashionDesignAPI.Database

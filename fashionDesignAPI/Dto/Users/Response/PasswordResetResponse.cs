@@ -1,4 +1,4 @@
-﻿namespace designFashion.Dto.Users.Response
+﻿namespace fashionDesignAPI.Dto.Users.Response
 {
     public class PasswordResetResponse
     {

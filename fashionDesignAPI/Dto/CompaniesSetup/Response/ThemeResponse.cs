@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Dto.CompaniesSetup.Response
+﻿namespace fashionDesignAPI.Dto.CompaniesSetup.Response
 {
     public class ThemeResponse
     {

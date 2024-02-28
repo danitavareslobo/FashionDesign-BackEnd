@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Dto.CompaniesSetup.Request
+﻿namespace fashionDesignAPI.Dto.CompaniesSetup.Request
 {
     public class CompaniesSetupRequest
     {

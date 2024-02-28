@@ -1,6 +1,6 @@
-﻿using fashionDesign.Models.Enums;
+﻿using fashionDesignAPI.Models.Enums;
 
-namespace designFashion.Dto.Users.Response
+namespace fashionDesignAPI.Dto.Users.Response
 {
     public class UsersResponse
     {

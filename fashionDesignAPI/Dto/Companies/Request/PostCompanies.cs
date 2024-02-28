@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace fashionDesign.Dto.Companies.Request
+namespace fashionDesignAPI.Dto.Companies.Request
 {
     public class PostCompanies
     {

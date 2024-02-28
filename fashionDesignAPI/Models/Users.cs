@@ -1,6 +1,6 @@
-﻿using fashionDesign.Models.Enums;
+﻿using fashionDesignAPI.Models.Enums;
 
-namespace fashionDesign.Models
+namespace fashionDesignAPI.Models
 {
     public class User
     {

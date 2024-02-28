@@ -1,8 +1,8 @@
-﻿using fashionDesign.Models.Enums;
+﻿using fashionDesignAPI.Models.Enums;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace fashionDesign.Dto.Users.Request
+namespace fashionDesignAPI.Dto.Users.Request
 {
     public class PostUsers
     {

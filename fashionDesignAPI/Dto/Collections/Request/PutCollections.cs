@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Dto.Collections.Request
+﻿namespace fashionDesignAPI.Dto.Collections.Request
 {
     public class PutCollections
     {

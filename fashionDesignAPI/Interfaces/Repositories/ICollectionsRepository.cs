@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Interfaces.Repositories
+﻿namespace fashionDesignAPI.Interfaces.Repositories
 {
     public class ICollectionsRepository
     {
