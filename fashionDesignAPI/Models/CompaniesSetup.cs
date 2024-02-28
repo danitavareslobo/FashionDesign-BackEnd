@@ -1,6 +1,13 @@
-﻿namespace fashionDesignAPI.Models
+﻿using fashionDesignAPI.Models.Enums;
+
+namespace fashionDesignAPI.Models
 {
     public class CompanySetup
     {
+        public int Id { get; set; }
+        public ThemeEnum Theme { get; set; }
+        public string Logo { get; set; }
+        public int CompanySetupId { get; set; }
+        public virtual Company Company { get; set; }
     }
 }
