@@ -1,8 +1,8 @@
-﻿using fashionDesign.Models;
+﻿using fashionDesignAPI.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 
-namespace fashionDesign.Database.Configurations
+namespace fashionDesignAPI.Database.Configurations
 {
     public class UsersConfiguration : IEntityTypeConfiguration<User>
     {

@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Database.Configurations
+﻿namespace fashionDesignAPI.Database.Configurations
 {
     public class ModelsConfiguration
     {

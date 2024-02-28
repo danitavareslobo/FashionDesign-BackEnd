@@ -1,7 +1,7 @@
-﻿using fashionDesign.Dto.Users.Request;
-using fashionDesign.Models;
+﻿using fashionDesignAPI.Dto.Users.Request;
+using fashionDesignAPI.Models;
 
-namespace fashionDesign.Interfaces.Repositories
+namespace fashionDesignAPI.Interfaces.Repositories
 {
     public interface IUsersRepository
     {

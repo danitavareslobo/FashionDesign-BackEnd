@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Services
+﻿namespace fashionDesignAPI.Services
 {
     public class ModelsService
     {

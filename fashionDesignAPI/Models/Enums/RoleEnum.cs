@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace fashionDesign.Models.Enums
+namespace fashionDesignAPI.Models.Enums
 {
     public enum RoleEnum
     {

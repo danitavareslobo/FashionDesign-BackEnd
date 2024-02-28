@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Controllers
+﻿namespace fashionDesignAPI.Controllers
 {
     public class CompaniesController 
     {

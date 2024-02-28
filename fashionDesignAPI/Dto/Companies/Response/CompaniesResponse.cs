@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Dto.Companies.Response
+﻿namespace fashionDesignAPI.Dto.Companies.Response
 {
     public class CompaniesResponse
     {

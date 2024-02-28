@@ -1,6 +1,6 @@
-﻿using designFashion.Dto.Users.Response;
-using fashionDesign.Exceptions;
-using fashionDesign.Models.Enums;
+﻿using fashionDesignAPI.Dto.Users.Response;
+using fashionDesignAPI.Exceptions;
+using fashionDesignAPI.Models.Enums;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace fashionDesignAPI.Attributes

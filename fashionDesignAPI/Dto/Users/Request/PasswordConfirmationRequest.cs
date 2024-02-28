@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Dto.Users.Request
+﻿namespace fashionDesignAPI.Dto.Users.Request
 {
     public class PasswordConfirmationRequest
     {

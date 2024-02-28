@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Dto.Models.Request
+﻿namespace fashionDesignAPI.Dto.Models.Request
 {
     public class PutModels
     {

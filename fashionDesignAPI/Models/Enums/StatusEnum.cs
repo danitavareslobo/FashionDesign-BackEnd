@@ -1,4 +1,4 @@
-﻿namespace fashionDesign.Models.Enums
+﻿namespace fashionDesignAPI.Models.Enums
 {
     public class StatusEnum
     {

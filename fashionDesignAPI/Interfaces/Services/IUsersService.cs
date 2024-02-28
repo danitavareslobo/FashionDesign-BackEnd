@@ -1,8 +1,8 @@
-﻿using designFashion.Dto.Users.Response;
-using fashionDesign.Dto.Users.Request;
-using fashionDesign.Models;
+﻿using fashionDesignAPI.Dto.Users.Response;
+using fashionDesignAPI.Dto.Users.Request;
+using fashionDesignAPI.Models;
 
-namespace fashionDesign.Interfaces.Services
+namespace fashionDesignAPI.Interfaces.Services
 {
     public interface IUsersService
     {
