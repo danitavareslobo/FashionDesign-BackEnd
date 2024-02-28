@@ -11,5 +11,6 @@
 
         public List<User> Users { get; set; }
         public virtual List<Collection> Collections { get; set; }
+        public virtual List<CompanySetup> CompanySetups { get; set; }
     }
 }
