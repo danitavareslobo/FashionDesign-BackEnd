@@ -10,5 +10,7 @@ namespace fashionDesignAPI.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public RoleEnum Role { get; set; }
+
+        public virtual Company Company { get; set; }
     }
 }
