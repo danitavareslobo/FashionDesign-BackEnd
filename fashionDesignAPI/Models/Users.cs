@@ -12,5 +12,6 @@ namespace fashionDesignAPI.Models
         public RoleEnum Role { get; set; }
 
         public virtual Company Company { get; set; }
+        public virtual List<Collection> Collections { get; set; }
     }
 }
