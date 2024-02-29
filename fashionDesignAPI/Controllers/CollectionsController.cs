@@ -5,7 +5,6 @@ using fashionDesignAPI.Interfaces.Services;
 using fashionDesignAPI.Models.Enums;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using RouteAttribute = Microsoft.AspNetCore.Components.RouteAttribute;
 
 namespace fashionDesignAPI.Controllers
 {
