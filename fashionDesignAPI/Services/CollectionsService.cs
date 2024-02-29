@@ -79,51 +79,9 @@ namespace fashionDesignAPI.Services
             return _mapper.Map<List<CollectionsResponse>>(await _repository.GetAllAsync(companyId));
         }
 
-        public async Task<List<CollectionsBudgetsVsCosts>> GetBudgetsVsCosts(int companyId)
+        public async Task<List<CollectionsResponse>> GetAllValidAsync(int companyId)
         {
-            var collections = await _repository.GetAllAsync(companyId);
-            var models = await _modelRepository.GetAllForCostsAsync(companyId);
-            List<CollectionsBudgetsVsCosts> response = new List<CollectionsBudgetsVsCosts>();
-
-            for (int monthValue = 1; monthValue <= 12; monthValue++)
-            {
-                MonthEnum currentMonth = (MonthEnum)monthValue;
-                double cost = CostsByMonth(models, monthValue);
-                decimal budget = BudgetsByMonth(collections, monthValue);
-                CollectionsBudgetsVsCosts budgetVsCosts = new CollectionsBudgetsVsCosts(currentMonth, cost, budget);
-                response.Add(budgetVsCosts);
-            }
-
-            return response;
-
-        }
-
-        private decimal BudgetsByMonth(List<Collection> collections, int month)
-        {
-            decimal total = 0;
-            foreach (var collection in collections)
-            {
-                if (collection.InclusionAt.Month == month)
-                {
-                    total += collection.Budget;
-                }
-            }
-
-            return total;
-        }
-
-        private double CostsByMonth(List<Model> models, int month)
-        {
-            double total = 0;
-            foreach (var model in models)
-            {
-                if (model.InclusionAt.Month == month)
-                {
-                    total += model.RealCost;
-                }
-            }
-
-            return total;
+            return _mapper.Map<List<CollectionsResponse>>(await _repository.GetAllValidAsync(companyId));
         }
 
         public async Task<CollectionsResponse> GetByIdAsync(int id, int companyId)
@@ -203,6 +161,53 @@ namespace fashionDesignAPI.Services
                 throw new BadRequestException("Não foi possível encontrar a lista de maiores orçamentos.");
 
             return response;
+        }
+
+        public async Task<List<CollectionsBudgetsVsCosts>> GetBudgetsVsCosts(int companyId)
+        {
+            var collections = await _repository.GetAllAsync(companyId);
+            var models = await _modelRepository.GetAllForCostsAsync(companyId);
+            List<CollectionsBudgetsVsCosts> response = new List<CollectionsBudgetsVsCosts>();
+
+            for (int monthValue = 1; monthValue <= 12; monthValue++)
+            {
+                MonthEnum currentMonth = (MonthEnum)monthValue;
+                double cost = CostsByMonth(models, monthValue);
+                decimal budget = BudgetsByMonth(collections, monthValue);
+                CollectionsBudgetsVsCosts budgetVsCosts = new CollectionsBudgetsVsCosts(currentMonth, cost, budget);
+                response.Add(budgetVsCosts);
+            }
+
+            return response;
+
+        }
+
+        private decimal BudgetsByMonth(List<Collection> collections, int month)
+        {
+            decimal total = 0;
+            foreach (var collection in collections)
+            {
+                if (collection.InclusionAt.Month == month)
+                {
+                    total += collection.Budget;
+                }
+            }
+
+            return total;
+        }
+
+        private double CostsByMonth(List<Model> models, int month)
+        {
+            double total = 0;
+            foreach (var model in models)
+            {
+                if (model.InclusionAt.Month == month)
+                {
+                    total += model.RealCost;
+                }
+            }
+
+            return total;
         }
     }
 }
